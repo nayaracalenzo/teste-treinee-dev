@@ -10,6 +10,7 @@ import { TodoService } from '../shared/services/todo.service';
 export class TodoComponent implements OnInit {
   todos: Todo[] = [];
   showCompletedTasks: boolean = true;
+  labelLimparTodas: string = 'Limpar todas';
 
   constructor(private todoService: TodoService) { }
 

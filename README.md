@@ -12,7 +12,8 @@ Relatório Técnico - [Nayara Queiroz Calenzo]
         Resolução: linha de código que executa adição de tarefa duplicada, linha 25 excluída. 
     4.2 Só está sendo possível salvar uma tarefa a primeira vez que clica no botão “Salvar”, só é possível salvar uma nova tarefa após atualizar a página (F5)
         Resolução: Havia uma condição para executar a adicação da tarefa apenas se count fosse menor que zero, a primeira vez executava e depois ele incrementava, impossibilitando nova adição. Foi apenas retirado a condição e o count. 
-    O texto do botão de limpar todas as tarefas não está em português.
+    4.3 O texto do botão de limpar todas as tarefas não está em português.
+        Resolução: No todo.component.html estava sendo usado innerHTML para adicionar a informação com rótulo do botão em inglês. Modifiquei para inserir uma variável e chamei ela no todo.component.ts declarando tipo de dado string e o valor padrão "Limpar todas"
     O botão “Exibir Tarefas Concluídas” está, na verdade, ocultando as tarefas concluídas.
     O botão “Ocultar Tarefas Concluídas” tem o comportamento invertido, exibindo as tarefas concluídas.
     Ao clicar em “Limpar Tarefas Concluídas”, a ação é executada sem pedir uma confirmação ao usuário.

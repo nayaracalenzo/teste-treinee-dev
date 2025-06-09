@@ -1,20 +1,17 @@
 <div class="todo-container">
-  <div class="todo-form">
-    <app-new-task></app-new-task>
-  </div>
-  <div class="todo-buttons">
-    <button class="toggle-button" (click)="toggleCompletedTasks()">
-      {{ showCompletedTasks ? 'Exibir Tarefas Concluídas' : 'Ocultar Tarefas Concluídas' }}
-    </button>
-    <button (click)="clearCompletedTasks()">Limpar Tarefas Concluídas</button>
-    <button (click)="clearAll()" [innerHTML]="labelClearAll"></button>
-  </div>
-  <div class="todo-list_container">
-    <div class="todo-list_todo">
-      <app-todo-item
-        *ngFor="let todo of todos"
-        [todo]="todo"
-      ></app-todo-item>
+    <div class="todo-form">
+        <app-new-task></app-new-task>
     </div>
-  </div>
+    <div class="todo-buttons">
+        <button class="toggle-button" (click)="toggleCompletedTasks()">
+            {{ showCompletedTasks ? 'Exibir Tarefas Concluídas' : 'Ocultar Tarefas Concluídas' }}
+        </button>
+        <button (click)="clearCompletedTasks()">Limpar Tarefas Concluídas</button>
+        <button (click)="clearAll()">{{ labelLimparTodas }}</button>
+    </div>
+    <div class="todo-list_container">
+        <div class="todo-list_todo">
+            <app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
+        </div>
+    </div>
 </div>
