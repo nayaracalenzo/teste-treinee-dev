@@ -50,8 +50,10 @@ export class TodoComponent implements OnInit {
   }
 
   clearCompletedTasks() {
+    if (this.todos.length > 0 && confirm('Are you sure you want to clear all tasks?')) {
     this.todoService.clearCompletedTasks();
     this.loadTodos();
+    }
   }
 
   toggleCompletedTasks() {
