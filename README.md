@@ -16,7 +16,8 @@ Relatório Técnico - [Nayara Queiroz Calenzo]
         Resolução: No todo.component.html estava sendo usado innerHTML para adicionar a informação com rótulo do botão em inglês. Modifiquei para inserir uma variável e chamei ela no todo.component.ts declarando tipo de dado string e o valor padrão "Limpar todas"
     4.4 O botão “Exibir Tarefas Concluídas” está, na verdade, ocultando as tarefas concluídas.
         Na função filteredTodos() o operador ternário estava com os blocos true e false invertidos, apenas troquei as posições, ocultando tarefas concluídas quando o botão mostrar concluidos for true
-    O botão “Ocultar Tarefas Concluídas” tem o comportamento invertido, exibindo as tarefas concluídas.
+    4.5 O botão “Ocultar Tarefas Concluídas” tem o comportamento invertido, exibindo as tarefas concluídas.
+        Como o problema 4.4 estava invertido com o 4.5 ambos foram consertados na mesma resolução. Aproveitei para mudar a variável showCompletedTasks para iniciar com "false" para que ao iniciar aplicação mostre as tarefas concluídas com o botão de ocultar tarefas concluídas, ao invés de mostrar, já que as tarefas já estavam ativas. 
     Ao clicar em “Limpar Tarefas Concluídas”, a ação é executada sem pedir uma confirmação ao usuário.
     O botão “Limpar Tarefas Concluídas” está removendo as tarefas não concluídas em vez das concluídas.
     O botão “Editar” não está funcional. O comportamento esperado é: ao clicar, o campo “Título da Tarefa” deve ser preenchido com o texto da tarefa selecionada. Ao salvar, o item na lista deve ser atualizado e o campo de texto limpo.
