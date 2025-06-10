@@ -15,12 +15,14 @@ Relatório Técnico - [Nayara Queiroz Calenzo]
     4.3 O texto do botão de limpar todas as tarefas não está em português.
         Resolução: No todo.component.html estava sendo usado innerHTML para adicionar a informação com rótulo do botão em inglês. Modifiquei para inserir uma variável e chamei ela no todo.component.ts declarando tipo de dado string e o valor padrão "Limpar todas"
     4.4 O botão “Exibir Tarefas Concluídas” está, na verdade, ocultando as tarefas concluídas.
-        Na função filteredTodos() o operador ternário estava com os blocos true e false invertidos, apenas troquei as posições, ocultando tarefas concluídas quando o botão mostrar concluidos for true
+        Resolução: Na função filteredTodos() o operador ternário estava com os blocos true e false invertidos, apenas troquei as posições, ocultando tarefas concluídas quando o botão mostrar concluidos for true
     4.5 O botão “Ocultar Tarefas Concluídas” tem o comportamento invertido, exibindo as tarefas concluídas.
-        Como o problema 4.4 estava invertido com o 4.5 ambos foram consertados na mesma resolução. Aproveitei para mudar a variável showCompletedTasks para iniciar com "false" para que ao iniciar aplicação mostre as tarefas concluídas com o botão de ocultar tarefas concluídas, ao invés de mostrar, já que as tarefas já estavam ativas. 
+        Resolução: Como o problema 4.4 estava invertido com o 4.5 ambos foram consertados na mesma resolução. Aproveitei para mudar a variável showCompletedTasks para iniciar com "false" para que ao iniciar aplicação mostre as tarefas concluídas com o botão de ocultar tarefas concluídas, ao invés de mostrar, já que as tarefas já estavam ativas. 
     4.6 Ao clicar em “Limpar Tarefas Concluídas”, a ação é executada sem pedir uma confirmação ao usuário.
          Resolução: Adicionei no método clearCompletedTasks() uma condicional para só executar o bloco de código deste método se a pessoa confirmar.
-    O botão “Limpar Tarefas Concluídas” está removendo as tarefas não concluídas em vez das concluídas.
+    4.7 O botão “Limpar Tarefas Concluídas” está removendo as tarefas não concluídas em vez das concluídas.
+        Resolução: a camada de service para tratar a limpeza das tarefas concluídas estava mantendo as tarefas concluídas mostrando os marcados como "complited" e foi resolvido mudando a filtragem para deixar as tarefas concluidas que estava como false, mantendo na tela somente as não concluídas 
+        Resolução: Última linha do bloco de código do método de limpar tarefas concluídas é a mesma da linha que limpa todos. 
     O botão “Editar” não está funcional. O comportamento esperado é: ao clicar, o campo “Título da Tarefa” deve ser preenchido com o texto da tarefa selecionada. Ao salvar, o item na lista deve ser atualizado e o campo de texto limpo.
     O botão “Editar” está desalinhado e deve ser posicionado ao lado do botão “Remover”.
     O botão “Remover” deve ter a cor vermelha para indicar uma ação destrutiva.
