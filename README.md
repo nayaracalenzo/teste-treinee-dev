@@ -14,7 +14,8 @@ Relatório Técnico - [Nayara Queiroz Calenzo]
         Resolução: Havia uma condição para executar a adicação da tarefa apenas se count fosse menor que zero, a primeira vez executava e depois ele incrementava, impossibilitando nova adição. Foi apenas retirado a condição e o count. 
     4.3 O texto do botão de limpar todas as tarefas não está em português.
         Resolução: No todo.component.html estava sendo usado innerHTML para adicionar a informação com rótulo do botão em inglês. Modifiquei para inserir uma variável e chamei ela no todo.component.ts declarando tipo de dado string e o valor padrão "Limpar todas"
-    O botão “Exibir Tarefas Concluídas” está, na verdade, ocultando as tarefas concluídas.
+    4.4 O botão “Exibir Tarefas Concluídas” está, na verdade, ocultando as tarefas concluídas.
+        Na função filteredTodos() o operador ternário estava com os blocos true e false invertidos, apenas troquei as posições, ocultando tarefas concluídas quando o botão mostrar concluidos for true
     O botão “Ocultar Tarefas Concluídas” tem o comportamento invertido, exibindo as tarefas concluídas.
     Ao clicar em “Limpar Tarefas Concluídas”, a ação é executada sem pedir uma confirmação ao usuário.
     O botão “Limpar Tarefas Concluídas” está removendo as tarefas não concluídas em vez das concluídas.
